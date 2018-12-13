@@ -28,6 +28,8 @@ module Request
     # the framework and any gems in your application.
 
     # Don't generate system test files.
+    config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
+    config.i18n.default_locale = :ru
     config.generators.system_tests = nil
   end
 end
